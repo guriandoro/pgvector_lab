@@ -60,4 +60,3 @@ PGV_PSQL_EXPLAIN=0 PGV_PSQL_VERT=1 PGV_PSQL_DEBUG=0 ./query_tmdb.py "astronauts 
 psql -c "CREATE INDEX ON movies_tmdb_embeddings USING hnsw (overview_embedding vector_cosine_ops) WITH (m = 16, ef_construction = 64);"
 
 PGV_PSQL_EXPLAIN=0 PGV_PSQL_VERT=1 PGV_PSQL_DEBUG=0 ./query_tmdb.py "astronauts in space" 10 cosine
-
