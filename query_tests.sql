@@ -76,7 +76,8 @@ ORDER BY ns.nspname, t.relname, i.relname;
 -----------+-------------------------------------+----------------+-----------+------------------------+-------------
      16764 | movies_tmdb_pkey                    | t              |     16725 | movies_tmdb            | public
      16778 | idx_overview_embedding_hnsw         | t              |     16730 | movies_tmdb_embeddings | public
-(2 rows)
+     16762 | movies_tmdb_embeddings_pkey         | t              |     16730 | movies_tmdb_embeddings | public
+(3 rows)
 
 -- Run EXPLAIN to see the query plan. It's using the HNSW index we created ("index scan on idx_overview_embedding_hnsw").
 postgres=# EXPLAIN (analyze,verbose,buffers,costs) 
